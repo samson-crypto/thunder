@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
-	"github.com/samsarahq/thunder/batch"
-	"github.com/samsarahq/thunder/graphql"
-	"github.com/samsarahq/thunder/graphql/schemabuilder"
+	"github.com/samson-crypto/thunder/batch"
+	"github.com/samson-crypto/thunder/graphql"
+	"github.com/samson-crypto/thunder/graphql/schemabuilder"
 	"github.com/stretchr/testify/require"
 )
 

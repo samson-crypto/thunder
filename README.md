@@ -3,7 +3,7 @@ Thunder has support for schemas automatically generated from Go types, live
 queries, query batching, and more. Thunder is an open-source project from
 Samsara.
 
-[![Documentation](https://godoc.org/github.com/samsarahq/thunder?status.svg)](http://godoc.org/github.com/samsarahq/thunder)
+[![Documentation](https://godoc.org/github.com/samson-crypto/thunder?status.svg)](http://godoc.org/github.com/samson-crypto/thunder)
 
 # Feature Lightning Tour
 
@@ -225,11 +225,11 @@ import (
   "net/http"
   "time"
 
-  "github.com/samsarahq/thunder/graphql"
-  "github.com/samsarahq/thunder/graphql/graphiql"
-  "github.com/samsarahq/thunder/graphql/introspection"
-  "github.com/samsarahq/thunder/graphql/schemabuilder"
-  "github.com/samsarahq/thunder/reactive"
+  "github.com/samson-crypto/thunder/graphql"
+  "github.com/samson-crypto/thunder/graphql/graphiql"
+  "github.com/samson-crypto/thunder/graphql/introspection"
+  "github.com/samson-crypto/thunder/graphql/schemabuilder"
+  "github.com/samson-crypto/thunder/reactive"
 )
 
 type post struct {

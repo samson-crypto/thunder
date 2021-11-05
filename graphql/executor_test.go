@@ -9,10 +9,10 @@ import (
 	"testing"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/samsarahq/thunder/graphql"
-	"github.com/samsarahq/thunder/graphql/schemabuilder"
-	"github.com/samsarahq/thunder/internal"
-	"github.com/samsarahq/thunder/internal/testgraphql"
+	"github.com/samson-crypto/thunder/graphql"
+	"github.com/samson-crypto/thunder/graphql/schemabuilder"
+	"github.com/samson-crypto/thunder/internal"
+	"github.com/samson-crypto/thunder/internal/testgraphql"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

@@ -6,7 +6,7 @@ import (
 	"sort"
 
 	"github.com/samsarahq/go/oops"
-	"github.com/samsarahq/thunder/graphql"
+	"github.com/samson-crypto/thunder/graphql"
 )
 
 // CollectTypes finds all types reachable from typ and stores them in types as a

@@ -1,19 +1,19 @@
 package federation
 
 import (
+	"bytes"
 	"context"
 	"encoding/json"
 	"fmt"
 	"reflect"
 	"sync"
 	"time"
-	"bytes"
 
 	"github.com/samsarahq/go/oops"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/samsarahq/thunder/graphql"
-	"github.com/samsarahq/thunder/graphql/introspection"
+	"github.com/samson-crypto/thunder/graphql"
+	"github.com/samson-crypto/thunder/graphql/introspection"
 )
 
 const keyField = "__key"

@@ -5,9 +5,9 @@ import (
 	"testing"
 
 	"github.com/samsarahq/go/oops"
-	"github.com/samsarahq/thunder/graphql"
-	"github.com/samsarahq/thunder/graphql/introspection"
-	"github.com/samsarahq/thunder/thunderpb"
+	"github.com/samson-crypto/thunder/graphql"
+	"github.com/samson-crypto/thunder/graphql/introspection"
+	"github.com/samson-crypto/thunder/thunderpb"
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc/metadata"
 )

@@ -1,4 +1,4 @@
-module github.com/samsarahq/thunder
+module github.com/samson-crypto/thunder
 
 go 1.15
 

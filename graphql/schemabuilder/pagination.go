@@ -10,9 +10,9 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/samsarahq/thunder/batch"
-	"github.com/samsarahq/thunder/graphql"
-	"github.com/samsarahq/thunder/internal/filter"
+	"github.com/samson-crypto/thunder/batch"
+	"github.com/samson-crypto/thunder/graphql"
+	"github.com/samson-crypto/thunder/internal/filter"
 	"golang.org/x/sync/errgroup"
 )
 

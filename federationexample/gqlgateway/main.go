@@ -9,11 +9,10 @@ import (
 	"google.golang.org/grpc"
 
 	"github.com/samsarahq/go/oops"
-	"github.com/samsarahq/thunder/federation"
-	"github.com/samsarahq/thunder/thunderpb"
-	"github.com/samsarahq/thunder/graphql"
+	"github.com/samson-crypto/thunder/federation"
+	"github.com/samson-crypto/thunder/graphql"
+	"github.com/samson-crypto/thunder/thunderpb"
 )
-
 
 type GatewayExecutorClient struct {
 	Client thunderpb.ExecutorServer
@@ -52,7 +51,7 @@ func (g *Gateway) Execute(ctx context.Context, req *thunderpb.ExecuteRequest) (*
 	if err != nil {
 		return nil, err
 	}
-	res,_, err := g.Executor.Execute(ctx, query, nil)
+	res, _, err := g.Executor.Execute(ctx, query, nil)
 	if err != nil {
 		return nil, err
 	}
@@ -68,7 +67,6 @@ func (g *Gateway) Execute(ctx context.Context, req *thunderpb.ExecuteRequest) (*
 	return resp, nil
 
 }
-
 
 type DirectExecutorClient struct {
 	Client thunderpb.ExecutorServer
@@ -90,8 +88,6 @@ func (c *DirectExecutorClient) Execute(ctx context.Context, request *federation.
 	return &federation.QueryResponse{Result: resp.Result}, nil
 }
 
-
-
 func main() {
 	ctx := context.Background()
 
@@ -104,7 +100,6 @@ func main() {
 		if err != nil {
 			log.Fatal(err)
 		}
-
 
 		execs[name] = &federation.GrpcExecutorClient{Client: thunderpb.NewExecutorClient(cc)}
 	}

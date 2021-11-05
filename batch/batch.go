@@ -22,7 +22,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/samsarahq/thunder/concurrencylimiter"
+	"github.com/samson-crypto/thunder/concurrencylimiter"
 )
 
 // DefaultWaitInterval is the default WaitInterval for Func.
@@ -154,10 +154,10 @@ func (f *Func) Invoke(ctx context.Context, arg interface{}) (interface{}, error)
 	if !existed {
 		// If none, create a new one.
 		bg = &batchGroup{
-			doneCh: make(chan struct{}, 0),
+			doneCh: make(chan struct{}),
 		}
 		if f.MaxSize > 0 {
-			bg.maxSizeCh = make(chan struct{}, 0)
+			bg.maxSizeCh = make(chan struct{})
 		}
 
 		bg.intervalTimer = time.NewTimer(waitInterval)

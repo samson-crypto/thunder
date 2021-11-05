@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/samsarahq/thunder/graphql"
-	"github.com/samsarahq/thunder/internal/testgraphql"
-	"github.com/samsarahq/thunder/reactive"
+	"github.com/samson-crypto/thunder/graphql"
+	"github.com/samson-crypto/thunder/internal/testgraphql"
+	"github.com/samson-crypto/thunder/reactive"
 )
 
 func BenchmarkSimpleExecute(b *testing.B) {

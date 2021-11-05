@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"github.com/samsarahq/go/oops"
-	"github.com/samsarahq/thunder/graphql"
+	"github.com/samson-crypto/thunder/graphql"
 )
 
 // serviceSchemas holds all schemas for all of versions of

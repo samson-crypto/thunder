@@ -7,10 +7,10 @@ import (
 	"time"
 
 	"github.com/samsarahq/go/oops"
-	"github.com/samsarahq/thunder/graphql"
-	"github.com/samsarahq/thunder/graphql/introspection"
-	"github.com/samsarahq/thunder/reactive"
-	"github.com/samsarahq/thunder/thunderpb"
+	"github.com/samson-crypto/thunder/graphql"
+	"github.com/samson-crypto/thunder/graphql/introspection"
+	"github.com/samson-crypto/thunder/reactive"
+	"github.com/samson-crypto/thunder/thunderpb"
 )
 
 type GrpcExecutorClient struct {
@@ -30,7 +30,6 @@ func (c *GrpcExecutorClient) Execute(ctx context.Context, req *QueryRequest) (*Q
 	}
 	return &QueryResponse{Result: resp.Result}, nil
 }
-
 
 // DirectExecutorClient is used to execute directly on any of the graphql servers
 type DirectExecutorClient struct {
