@@ -20,24 +20,24 @@ type DirectiveLocation string
 
 const (
 	QUERY               DirectiveLocation = "QUERY"
-	MUTATION                              = "MUTATION"
-	FIELD                                 = "FIELD"
-	FRAGMENT_DEFINITION                   = "FRAGMENT_DEFINITION"
-	FRAGMENT_SPREAD                       = "FRAGMENT_SPREAD"
-	INLINE_FRAGMENT                       = "INLINE_FRAGMENT"
+	MUTATION            DirectiveLocation = "MUTATION"
+	FIELD               DirectiveLocation = "FIELD"
+	FRAGMENT_DEFINITION DirectiveLocation = "FRAGMENT_DEFINITION"
+	FRAGMENT_SPREAD     DirectiveLocation = "FRAGMENT_SPREAD"
+	INLINE_FRAGMENT     DirectiveLocation = "INLINE_FRAGMENT"
 )
 
 type TypeKind string
 
 const (
 	SCALAR       TypeKind = "SCALAR"
-	OBJECT                = "OBJECT"
-	INTERFACE             = "INTERFACE"
-	UNION                 = "UNION"
-	ENUM                  = "ENUM"
-	INPUT_OBJECT          = "INPUT_OBJECT"
-	LIST                  = "LIST"
-	NON_NULL              = "NON_NULL"
+	OBJECT       TypeKind = "OBJECT"
+	INTERFACE    TypeKind = "INTERFACE"
+	UNION        TypeKind = "UNION"
+	ENUM         TypeKind = "ENUM"
+	INPUT_OBJECT TypeKind = "INPUT_OBJECT"
+	LIST         TypeKind = "LIST"
+	NON_NULL     TypeKind = "NON_NULL"
 )
 
 type InputValue struct {
@@ -55,7 +55,7 @@ type EnumValue struct {
 	Name              string
 	Description       string
 	IsDeprecated      bool
-	DeprecationReason string
+	DeprecationReason string `json:"deprecationReason,omitempty"`
 }
 
 func (s *introspection) registerEnumValue(schema *schemabuilder.Schema) {
@@ -98,7 +98,7 @@ var includeDirective = Directive{
 	},
 	Name: "include",
 	Args: []InputValue{
-		InputValue{
+		{
 			Name:        "if",
 			Type:        Type{Inner: &graphql.NonNull{Type: &graphql.Scalar{Type: "bool"}}},
 			Description: "Included when true.",
@@ -115,7 +115,7 @@ var skipDirective = Directive{
 	},
 	Name: "skip",
 	Args: []InputValue{
-		InputValue{
+		{
 			Name:        "if",
 			Type:        Type{Inner: &graphql.NonNull{Type: &graphql.Scalar{Type: "bool"}}},
 			Description: "Skipped when true.",
